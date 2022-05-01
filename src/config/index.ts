@@ -1,4 +1,14 @@
-export default () => ({
+export interface AppConfiguration {
+  port: number;
+  databaseUrl: string;
+  firebase: {
+    projectId: string;
+    clientEmail: string;
+    privateKey: string;
+  };
+}
+
+export default (): AppConfiguration => ({
   port: parseInt(process.env.PORT, 10) || 3000,
   databaseUrl:
     process.env.DATABASE_URL || 'mongodb://localhost:27017/keep-clone-nestjs',
