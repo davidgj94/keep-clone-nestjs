@@ -87,4 +87,6 @@ NotesSchema.set('toJSON', {
   virtuals: true,
 });
 
-export default NotesSchema;
+const NotesModelDefinition = { schema: NotesSchema, name: 'Note' };
+
+export default NotesModelDefinition;
