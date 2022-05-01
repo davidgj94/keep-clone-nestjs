@@ -1,1 +1,4 @@
-export class Label {}
+export interface Label {
+  id: string;
+  name: string;
+}
